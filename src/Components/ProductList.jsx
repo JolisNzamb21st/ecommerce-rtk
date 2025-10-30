@@ -13,7 +13,13 @@ const ProductList = () => {
     <div className="product-list">
       <h2 className="product-list-title">Products</h2>
       <ul className="product-list-items">
-     
+      {products.map(product =>(
+       <li className='product-list-item' key={product.id}>
+       <span>{product.name} - ${product.price}</span>
+       <button>Add to cart</button>
+       </li> 
+       
+      ))}
       </ul>
     </div>
   );
